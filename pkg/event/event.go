@@ -52,6 +52,8 @@ func New(obj interface{}, action string) Event {
 	reason = action
 	status = m[action]
 
+	fmt.Printf("%+v\n", obj)
+
 	switch object := obj.(type) {
 	case *ext_v1beta1.DaemonSet:
 		kind = "daemon set"
